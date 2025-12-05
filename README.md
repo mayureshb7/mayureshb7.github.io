@@ -1,2 +1,2 @@
-# mayureshbhosale.io
+# mayureshb7.io
 My Portfolio
