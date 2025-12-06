@@ -1,2 +1,2 @@
-# mayureshb7.io
+# mayureshb7.github.io
 My Portfolio
