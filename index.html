@@ -3,44 +3,153 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
+    <title>Mayuresh Bhosale</title>
 
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f5f5;
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: #0f1b20;
+            color: #d3d7d8;
         }
+
+        /* Top navigation bar */
         header {
-            background: #333;
-            color: white;
-            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+            background-color: #25393f;
+            color: #fff;
+            font-size: 1.4rem;
         }
-        main {
-            padding: 2rem;
+
+        .nav-right a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #ffffffcc;
+            font-size: 1.1rem;
         }
-        footer {
-            margin-top: 4rem;
+
+        .nav-right a:hover {
+            color: #fff;
+        }
+
+        /* Main content container */
+        .card {
+            max-width: 1100px;
+            background-color: #1e2f34;
+            margin: 4rem auto;
+            padding: 2.5rem 3rem;
+            border-radius: 15px;
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+
+        .card-text {
+            flex: 3;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .card-text h2 {
             text-align: center;
-            padding: 1rem;
-            background: #e0e0e0;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            font-size: 1.8rem;
+        }
+
+        .card-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .card-image img {
+            width: 240px;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        /* Links in About Me */
+        .links {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .links a {
+            display: inline-block;
+            margin: 0.5rem 1rem;
+            text-decoration: none;
+            color: #7ec8ff;
+            font-size: 1.1rem;
+        }
+
+        .links a:hover {
+            color: #b8e4ff;
+        }
+
+        @media (max-width: 900px) {
+            .card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .card-image {
+                order: -1;
+            }
         }
     </style>
 </head>
 
 <body>
+
+    <!-- Header -->
     <header>
-        <h1>Welcome to My Website</h1>
+        <div><strong>Mayuresh Bhosale</strong></div>
+        <div class="nav-right">
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#cv">CV</a>
+        </div>
     </header>
 
-    <main>
-        <h2>Hello!</h2>
-        <p>Page coming soon!</p>
-    </main>
+    <!-- About Me Card -->
+    <div class="card" id="about">
+        <div class="card-text">
+            <h2>About Me</h2>
 
-    <footer>
-        <p>&copy; 2025 My Website</p>
-    </footer>
+            <p>
+                I am a Ph.D. student at Clemson University working on off-road autonomous vehicles, 
+                stuck-aware recovery strategies, and high-fidelity simulation using Unreal Engine + ROS 2. 
+                My research focuses on combining deformable-terrain physics, sensor fusion, and 
+                large multimodal models (LMMs) for human-AI collaborative recovery behaviors.
+            </p>
+
+            <p>
+                My work spans virtual prototyping, real-time LMM guidance (GPT-4o, LLaVA), 
+                off-road vehicle terramechanics, and scaled physical platforms for validation. 
+                I build end-to-end pipelines involving simulation, perception, control, 
+                data generation, and LMM fine-tuning for improved autonomy in unstructured terrains.
+            </p>
+
+            <p>
+                You can explore my key projects, publications, and CV using the links above.
+            </p>
+
+            <div class="links">
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://github.com/mayureshb7" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <!-- Profile Image -->
+        <div class="card-image">
+            <img src="profile.jpg" alt="Profile Photo" />
+        </div>
+    </div>
+
 </body>
 </html>
